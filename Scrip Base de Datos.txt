@@ -1,0 +1,15 @@
+-- Eliminar la base de datos si ya existe  DROP DATABASE IF EXISTS telegram_db;
+
+-- Crear la base de datos con la codificación adecuada
+CREATE DATABASE telegram_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Usar la base de datos
+USE telegram_db;
+
+-- Crear la tabla usuario con codificación utf8mb4
+CREATE TABLE usuario (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    nombre_usuario VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    id_chat VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci UNIQUE
+);
